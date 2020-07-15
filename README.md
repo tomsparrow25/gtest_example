@@ -1,7 +1,8 @@
 # factorial_gtest_example
 
 ## Install googletest library on you linux host
-```$ git clone https://github.com/google/googletest.git
+```
+$ git clone https://github.com/google/googletest.git
 $ cd googletest
 $ git checkout tags/v1.10.x -b v1.10.x
 $ cd ..
@@ -14,7 +15,8 @@ $ sudo make install
 
 ## Clone unit test example
 
-```$ git clone https://github.com/giangtqh/factorial_gtest_example.git
+```
+$ git clone https://github.com/giangtqh/factorial_gtest_example.git
 $ cd factorial_gtest_example
 $ make
 $ ./unittest
