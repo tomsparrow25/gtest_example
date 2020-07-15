@@ -8,7 +8,7 @@ $ git checkout tags/v1.10.x -b v1.10.x
 $ cd ..
 $ mkdir buildgtest
 $ cd buildgtest
-$ cmake ../googletest
+$ cmake -DBUILD_SHARED_LIBS=ON ../googletest
 $ make
 $ sudo make install
 ```
@@ -19,6 +19,7 @@ $ sudo make install
 $ git clone https://github.com/giangtqh/factorial_gtest_example.git
 $ cd factorial_gtest_example
 $ make
+$ export LD_LIBRARY_PATH=/usr/local/lib
 $ ./unittest
 [==========] Running 2 tests from 1 test suite.
 [----------] Global test environment set-up.
