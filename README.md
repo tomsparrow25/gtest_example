@@ -16,21 +16,38 @@ $ sudo make install
 ## Clone unit test example
 
 ```
-$ git clone https://github.com/giangtqh/factorial_gtest_example.git
-$ cd factorial_gtest_example
-$ make
-$ export LD_LIBRARY_PATH=/usr/local/lib
-$ ./unittest
-[==========] Running 2 tests from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 2 tests from FactorialTest
-[ RUN      ] FactorialTest.HandlesZeroInput
-[       OK ] FactorialTest.HandlesZeroInput (0 ms)
-[ RUN      ] FactorialTest.HandlesPositiveInput
-[       OK ] FactorialTest.HandlesPositiveInput (0 ms)
-[----------] 2 tests from FactorialTest (0 ms total)
+$ git clone https://github.com/giangtqh/gtest_example.git
+$ cd gtest_example
+# Build Factorial application
+$ mkdir build
+$ cd build && cmake ..
+$ ./Factorial
+```
+## Build Factorial test 
 
-[----------] Global test environment tear-down
-[==========] 2 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 2 tests.
+```
+$ cd test
+$ mkdir build
+$ cd build && cmake ..
+$ make FactorialTest
+$ ./FactorialTest
+```
+
+## Build CodeCoverage
+
+```
+$ cd test
+$ mkdir build
+$ cd build && cmake ..
+$ make TestCodeCoverage
+$ ./FactorialTest
+```
+
+## Generate code coverage report for CodeCoverage
+
+```
+$ cd /home/u16/ghome/gtest_example/test/build
+$ make gcov
+$ make lcov
+# see report in /home/u16/ghome/gtest_example/test/build/lcoverage/index.html
 ```

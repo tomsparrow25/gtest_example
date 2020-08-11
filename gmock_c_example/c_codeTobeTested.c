@@ -1,7 +1,10 @@
 #include <stdint.h>
+#ifdef UNIT_TEST
 #include "fake_cFunctions.h"
+//#else
+//#include "real_implementation.h"
+#endif
 
-//Fake
 int inits(){
     return bcm2835_init();
 }

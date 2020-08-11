@@ -1,3 +1,4 @@
+#include "Factorial.h"
 
 int Factorial(int n) {
     int result = 1;
@@ -7,3 +8,4 @@ int Factorial(int n) {
 
     return result;
 }
+
